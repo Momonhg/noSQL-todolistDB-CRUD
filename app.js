@@ -14,14 +14,27 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-//set up with mongoose
+//set up with mongoose with 
+
+//LOCAL HOST
 //connect to MongoDB by specifying port to access MongoDB server
+// main().catch(err => console.log(err));
+
+// async function main() {
+//   await mongoose.connect('mongodb://localhost:27017/todolistDB',{useNewUrlParser: true});
+// }
+
+//WITH MONGOATLAS
+// SET UP CLUSTERX WITH ADMIN ON MONGO ATLAS 
+//CAN FIND IT HERE FOR MORE DETAILS
+
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/todolistDB',{useNewUrlParser: true});
+  await mongoose.connect('mongodb+srv://momonhg:hello123-@cluster0.nhz4ejy.mongodb.net/todolistDB',{useNewUrlParser: true});
 }
 
+//original link is mongodb+srv://momonhg:<password>@cluster0.nhz4ejy.mongodb.net/ // we remove this (?retryWrites=true&w=majority) 
 
 ////////////////////ITEMS name
 
@@ -216,6 +229,6 @@ app.get("/:customeListName", function(req, res) {
 
 
 app.listen(3000, function() {
-  console.log("Server 27017");
+  console.log("Server 3000");
 
 });
