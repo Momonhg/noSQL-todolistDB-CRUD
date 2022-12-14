@@ -1,5 +1,5 @@
-# noSQL-todolistDB-CRUD
-Skeleton code for CRUD - todolist
+# noSQL-todolistDB-CRUD-MongoAtlas
+Skeleton code for CRUD - todolist - connect with Mongo Atlas
 
 ### Built with:
 
