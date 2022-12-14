@@ -1,5 +1,4 @@
 const express = require("express");
-// const https = require("https");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require('lodash')
@@ -20,7 +19,7 @@ app.use(express.static("public"));
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/todolistDB');
+  await mongoose.connect('mongodb://localhost:27017/todolistDB',{useNewUrlParser: true});
 }
 
 
@@ -40,15 +39,15 @@ const Item = new mongoose.model("Item", itemsSchema);
 
 //CREATE DEFAULT ITEMS
 const one = new Item({
-  name: "insert one"
+  name: "item one"
 });
 
 const two = new Item({
-  name: "insert two"
+  name: "item two"
 });
 
 const three = new Item({
-  name: "insert three"
+  name: "item three"
 });
 
 //CREATE DEFAULT ITEMS ARRAY
@@ -216,7 +215,7 @@ app.get("/:customeListName", function(req, res) {
 
 
 
-app.listen(27017, function() {
+app.listen(3000, function() {
   console.log("Server 27017");
 
 });
