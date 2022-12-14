@@ -1,2 +1,16 @@
 # noSQL-todolistDB-CRUD
- CRUD, mongoDB
+Skeleton code for CRUD - todolist
+
+### Built with:
+
+* MongoDB
+
+* mongoose
+
+* body-parser
+
+* express
+
+* ejs
+
+* CRUD
