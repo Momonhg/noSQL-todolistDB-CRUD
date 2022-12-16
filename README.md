@@ -14,3 +14,7 @@ Skeleton code for CRUD - todolist - connect with Mongo Atlas
 * ejs
 
 * CRUD
+
+* Studio 3T(hostDatabase)
+
+* Postman (test API)
